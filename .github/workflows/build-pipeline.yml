@@ -7,10 +7,10 @@ on:
     branches: [ develop ]
 
 jobs:
-  add-beans:
-  grind-beans:
+  - add-beans:
+  - grind-beans:
     needs: add-beans
-  brew-coffee:
+  - brew-coffee:
     needs: [add-beans, grind-beans]
   build:
     runs-on: ubuntu-latest
